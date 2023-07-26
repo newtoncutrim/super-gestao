@@ -15,3 +15,5 @@ Route::get('/', [PrincipalController::class, 'principal']);
 Route::get('/contato', [ContatoController::class, 'contato']);
 
 Route::get('/sobre', [SobrenosController::class, 'sobrenos']);
+
+Route::get('/contato/{id?}/{name?}', [ContatoController::class, 'contato_para'])->where('id', '[0-9]+')->where('name', '[A-Za-z]+');
