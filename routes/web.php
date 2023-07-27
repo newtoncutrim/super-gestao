@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\SobrenosController;
+use App\Http\Controllers\TesteController;
 use App\Http\Middleware\VerifyCsrfToken;
 
 Route::get('/', [PrincipalController::class, 'principal'])->name('site.index');
@@ -21,6 +22,7 @@ Route::prefix('/app')->group(function(){
     Route::get('/produtos', function(){return 'produtos'; })->name('app.produtos');
 });
 
+Route::get('/teste', [TesteController::class, 'teste'])->name('site.teste');
 /* Route::get('/contato/{id?}/{name?}', [ContatoController::class, 'contato_para'])->where('id', '[0-9]+')->where('name', '[A-Za-z]+'); */
 
 /* Route::get('/teste1', function(){return 'teste1';})->name('site.teste1');
