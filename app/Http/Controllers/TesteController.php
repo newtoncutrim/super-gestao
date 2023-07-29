@@ -16,4 +16,8 @@ class TesteController extends Controller
 
         /* return view('site.teste', ['data' => 'teste de dados para view']); */
     }
+
+    public function sintaxe(){
+        return view('site.sintaxe');
+    }
 }

@@ -23,6 +23,7 @@ Route::prefix('/app')->group(function(){
 });
 
 Route::get('/teste', [TesteController::class, 'teste'])->name('site.teste');
+Route::get('/sintaxe', [TesteController::class, 'sintaxe'])->name('site.sintaxe');
 /* Route::get('/contato/{id?}/{name?}', [ContatoController::class, 'contato_para'])->where('id', '[0-9]+')->where('name', '[A-Za-z]+'); */
 
 /* Route::get('/teste1', function(){return 'teste1';})->name('site.teste1');
