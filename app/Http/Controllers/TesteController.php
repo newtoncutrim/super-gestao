@@ -18,6 +18,7 @@ class TesteController extends Controller
     }
 
     public function sintaxe(){
-        return view('site.sintaxe');
+        $nome = 'newton';
+        return view('site.sintaxe', compact('nome'));
     }
 }

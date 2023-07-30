@@ -19,4 +19,20 @@
     <p>teste</p>
 @endunless
 
-<h2></h2>
+<h2>se for setado isset</h2>
+
+@isset($nome)
+    <p>ola setado {{$nome}}</p>
+@endisset
+
+<h2>se nao existir valor empyt</h2>
+{{-- se tiver valor ele nao exibe --}}
+@empty($semValor)
+    <p> variavel sem valor</p>
+@endempty
+
+<h2>ternario</h2>
+@php
+    $nome ? 'sim' : 'nao';
+@endphp
+
