@@ -13,6 +13,7 @@ use App\Http\Middleware\VerifyCsrfToken;
 
 Route::get('/', [PrincipalController::class, 'principal'])->name('site.index');
 Route::get('/contato', [ContatoController::class, 'contato'])->name('site.contato');
+Route::post('/contato', [ContatoController::class, 'contato'])->name('contato_action');
 Route::get('/sobre', [SobrenosController::class, 'sobrenos'])->name('site.sobre');
 
 Route::prefix('/app')->group(function(){
