@@ -71,3 +71,4 @@ networks:
 # cp .env
 # generate key
 #https://jsonplaceholder.typicode.com/todos/1
+#docker compose exec app php -r "var_dump(extension_loaded('pdo_mysql'));"
