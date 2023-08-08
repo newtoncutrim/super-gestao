@@ -11,13 +11,16 @@ class Produto extends Model
     protected $fillable = [
         'nome',
         'descricao',
+        'peso',
         'preco_venda',
         'estoque_min',
         'estoque_max',
-        'id_fornecedor'
+        'id_fornecedor',
+        'id_detalhe'
     ];
      
     public function fornecedor(){
         return $this->belongsTo(Fornecedor::class, 'id_fornecedor');
     }
+
 }
