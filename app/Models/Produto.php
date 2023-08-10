@@ -23,4 +23,7 @@ class Produto extends Model
         return $this->belongsTo(Fornecedor::class, 'id_fornecedor');
     }
 
+    public function detalhes(){
+        return $this->belongsTo(ProdutoDetalhe::class);
+    }
 }
