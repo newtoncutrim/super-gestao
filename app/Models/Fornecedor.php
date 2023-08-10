@@ -17,6 +17,6 @@ class Fornecedor extends Model
     protected $table = 'fornecedores';
 
     public function produtos(){
-        return $this->hasMany(Produto::class);
+        return $this->hasMany(Produto::class, 'id_fornecedor');
     }
 }

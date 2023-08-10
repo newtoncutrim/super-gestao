@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Produto extends Model
 {
     use HasFactory;
+    protected $table = 'produtos';
     protected $fillable = [
         'nome',
         'descricao',
@@ -23,7 +24,7 @@ class Produto extends Model
         return $this->belongsTo(Fornecedor::class, 'id_fornecedor');
     }
 
-    public function detalhes(){
-        return $this->belongsTo(ProdutoDetalhe::class);
+    public function unidades(){
+        return $this->belongsTo(Unidade::class, 'id_unidade');
     }
 }

@@ -5,19 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Unidade extends Model
 {
-
     use HasFactory;
-
-    public $timestamps = false;
+    protected $table = 'unidades';
 
     protected $fillable = [
-        'name',
-        'slug'
+        'unidade',
+        'descricao'
     ];
-
-    public function adverts(){
-        return $this->hasMany(Advert::class);
-    }
 }
